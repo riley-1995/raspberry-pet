@@ -9,10 +9,11 @@ import cv2
 import tflite_runtime.interpreter as tflite
 from supabase import create_client, Client
 from datetime import datetime
+from dotenv import load_dotenv
 
 # ===== CONFIG =====
-SUPABASE_URL = "https://your-project.supabase.co"
-SUPABASE_KEY = "your-service-role-key"
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 BUCKET_NAME = "pet-media"
 MODEL_PATH = "pet_model.tflite"  # compiled for Coral
 LABELS = ["cat_1", "cat_2", ..., "dog_50"]  # replace with your actual labels
