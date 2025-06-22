@@ -14,7 +14,7 @@ from datetime import datetime
 SUPABASE_URL = "https://your-project.supabase.co"
 SUPABASE_KEY = "your-service-role-key"
 BUCKET_NAME = "pet-media"
-MODEL_PATH = "model_edgetpu.tflite"  # compiled for Coral
+MODEL_PATH = "pet_model.tflite"  # compiled for Coral
 LABELS = ["cat_1", "cat_2", ..., "dog_50"]  # replace with your actual labels
 
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
